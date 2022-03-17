@@ -1,0 +1,1792 @@
+* {
+    box-sizing: border-box;
+    /*Le añadiremos una fuente a toda la pagina*/
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Damos color de fondo al body*/
+
+body {
+    background-color: white;
+}
+
+
+/*-------------CABECERA--------------*/
+
+/*Haremos la cabecera flexible por columnas*/
+
+header {
+    display: flex;
+    flex-flow: column;
+}
+
+/* Haremos el contedor flexible y enviaremos el contenido a la derecha
+Le daremos un color y lo alinearemos en el centro verticalmente*/
+
+header nav#redes-sociales {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    background-color: black;
+    align-items: center;
+    border-bottom: 1px solid #676D6D;
+}
+
+
+/*Le daremos un tamaño a las imagenes y un margen*/
+
+header nav#redes-sociales a img {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+}
+
+/*Le daremos margen a la segunda imagen del contenedor*/
+
+header nav#redes-sociales a img:nth-child(2) {
+    margin-left: 2rem;
+}
+
+/*Al parrafo del contenedor le daremos un tamaño, le asignaremos color,
+un padding y un borde*/
+
+nav#redes-sociales p {
+    padding-right: 2rem;
+    font-size: 0.7rem;
+    color: white;
+    border-right: 3px solid #2BB3C0;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+/*Haremos flexible el contenedor en formato filas,alinearemos los items centrados de manera vertical,
+le daremos borde al contenedor,tamaño y un color de fondo.
+*/
+
+header nav#menu-principal {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 5.5rem;
+    justify-content: space-between;
+    background-color: black;
+}
+
+
+/*Le daremos tamaño y margen a la imagen del contenedor*/
+
+picture#login img {
+    height: 1.2rem;
+    width: 1.3rem;
+    margin-left: 0.4rem;
+    cursor: pointer;
+}
+
+/*Le daremos tamaño y margen a la hamburguesa*/
+
+header nav#menu-principal picture img#hamburguesa {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 1.3rem;
+    cursor: pointer;
+}
+
+picture#logo {
+
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+picture#logo img {
+
+    width: 100%;
+    height: 100%;
+}
+
+picture img#user {
+    margin-right: 1.3rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+
+
+/*--------MENU LOGIN---------*/
+
+/*Lo haremos absoluto para poder ocultarlo, le asignaremos tamaño, color...
+y lo ocultaremos*/
+
+header nav#menu-principal nav#autenticacion {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0rem;
+    left: -800vw;
+    background-color: #E3E3E3;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #2C2C2C;
+    border-radius: 1rem;
+    z-index: 10001;
+}
+
+div#login {
+
+    border: 1px solid black;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+/*Haremos el formulario flexible y en forma de columna*/
+
+div#login form {
+    display: flex;
+    flex-flow: column;
+
+}
+
+
+/*Asignaremos forma y color a los input del formulario que contengan la clase*/
+
+input.estiloinput {
+    background-color: transparent;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    color: black;
+    border-color: black;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*Asignaremos forma y color al contenido de los inputs de la clase*/
+
+input.estiloinput::placeholder {
+    color: black;
+    font-size: 1rem;
+}
+
+/*Hacemos flexible el contenedor y le asignaremos un borde y un padding para hacer 
+la linea de separacion*/
+
+form nav#aceptarterminos {
+    padding-bottom: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*Le asignaremos tamaño y margen al texto del label*/
+
+nav#aceptarterminos label {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+/*Le asignaremos color y tamaño al input de la clase boton.estilo
+Tamabien le daremos tamaño y color al texto que contiene*/
+
+.boton-estilo {
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-color: #2BB3C0;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.boton-registro {
+    color: black;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid#2BB3C0;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+
+/*----MENU HAMBURGUESA-----*/
+
+/*Haremos absoluto el menu de la hamburguesa para poder ocultarlo, le asignaremos tamaño,lo haremos flexible, color...
+y lo ocultaremos*/
+
+header nav#menu-principal div#menu-opciones {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0rem;
+    left: -800vw;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    z-index: 10001;
+}
+
+/*Haremos flexible el contenedor de la cabecera del menu.
+Le daremos tamaño y color*/
+
+header nav#menu-principal div#menu-opciones div#cabeceramenu {
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+/*Le asignaremos un tamaño a las imagenes de la cabecera del menu*/
+
+header nav#menu-principal div#menu-opciones div#cabeceramenu img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/*Le asignaremos un tamaño al contenedor que contiene el logo y le asignaremos un 
+margen*/
+
+header nav#menu-principal div#menu-opciones div#cabeceramenu picture#mrlogomenu {
+    flex: 80%;
+    margin-left: 2.2rem;
+
+}
+
+/*Colocaremos la X a la derecha y le haremos un cursor pointer*/
+
+header nav#menu-principal div#menu-opciones div#cabeceramenu picture #salirmenu {
+    margin-left: auto;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+/*Haremos flexible el contenedor en columna y le daremos un espaciado */
+
+header div#menu-opciones div#menu-contenido {
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+
+}
+
+
+/*Haremos el contenedor flexible en formato de fila, le daremos color,margen y 
+aplicaremos formato a la fuente que contiene*/
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido {
+    display: flex;
+    flex-flow: row wrap;
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/*Haremos el menu flexible, le asignaremos un borde y un ancho*/
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-secciones {
+    padding-right: 1rem;
+    display: flex;
+    flex-flow: column;
+    padding-left: 0rem;
+    flex: 40%;
+}
+
+/*Haremos el menu flexible, le asignaremos un ancho*/
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-coleccion {
+    flex: 40%;
+    display: flex;
+    flex-flow: column;
+    visibility: hidden;
+}
+
+/*Quitaremos el formato lista, le aplicaremos margen y borde a los li*/
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-secciones li {
+    list-style: none;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #CECECE;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+/*Quitaremos el borde al quinto hijo */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-secciones li:nth-child(5) {
+    border-bottom: none;
+}
+
+/*Quitaremos el subrayado a los enlaces y le daremos color */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-secciones li a {
+    text-decoration: none;
+    color: black;
+}
+
+/*Quitaremos el estilo lista, le aplicaremos margen y tamaño a los li  */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-coleccion li {
+    list-style: none;
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+/*Quitaremos el subrayado a los enlaces y le daremos color */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-coleccion li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Al pasar el cursor le daremos formato al enlace */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido a:hover {
+    border-radius: 0.5rem;
+    border: 1px solid #2BB3C0;
+    padding: 0.5rem;
+}
+
+
+/*-------------CONTENIDO PRINCIPAL--------------*/
+
+/*Damos tamaño al principal*/
+
+.bx-wrapper {
+    width: 100%;
+}
+
+/*Haremos el contenedor principal del main flexible en formato columnas y le daremos margenes*/
+
+main nav#secciones {
+    display: flex;
+    flex-flow: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*Haremos flexible los articulos en formato columna, le daremos color, margenes y le aplicaremos bordes*/
+
+main nav#secciones article.item {
+    display: flex;
+    flex-flow: column;
+    background-color: black;
+    margin-top: 1rem;
+    color: white;
+    border: 1px solid black;
+}
+
+/*Le daremos un tamaño a la imagen del articulo*/
+
+main nav#secciones article.item picture img {
+    width: 100%;
+    border-bottom: 2px solid #2BB3C0;
+}
+
+/*Le daremos un tamaño y margen al parrafo del articulo*/
+
+main nav#secciones article.item a h2 {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-bottom: auto;
+    color: white;
+}
+
+/*Quitamos el subrayado al enlace del articulo*/
+
+main nav#secciones article.item a {
+    text-decoration: none;
+}
+
+/*Le daremos un tamaño y margen al span del articulo*/
+
+main nav#secciones article.item span {
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
+/*Haremos el contenedor flexible , le aplicaremos margenes y alinearemos los items hijos
+de manera horizontal y vertical*/
+
+main nav#social {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+/*Haremos el contenedor flexible , le aplicaremos margenes, alinearemos los items hijos
+de manera horizontal y vertical. Tambien le aplicaremos color de fondo y modificaremos el borde*/
+
+main nav#social nav#iconos-sociales {
+    display: flex;
+    background-color: #2C2C2C;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/*Le daremos una altura a las imagenes y un maximo a la anchura*/
+
+main nav#social nav#iconos-sociales a img {
+    height: 1.5rem;
+    max-width: 100%;
+}
+
+/*Le daremos un margen a la segunda imagen del contenedor*/
+
+main nav#social nav#iconos-sociales a:nth-child(2) img {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/*Le aplicaremos un tamaño, margenes y borde, tambien lo haremos flexible para poder alinear el texto*/
+
+main nav#social p {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-flow: column;
+    border-right: 3px solid #C42C2C;
+    margin-right: 1.5rem;
+}
+
+
+
+/*-------------PIE--------------*/
+
+/*Le asignaremos un color de fondo, lo haremos flexible en columnas, le daremos un padding y 
+un color para el texto*/
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-flow: column;
+    color: white;
+    padding-top: 1rem;
+}
+
+/*Le daremos tamaño y margen a los parrafos que tengan la clase destacado*/
+
+footer p.destacado {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 1.7rem;
+    margin-bottom: auto;
+}
+
+footer div#infocontacto p#destacadotel {
+    border-top: 1px solid #2BB3C0;
+    padding-top: 1rem;
+    margin-left: 1.7rem;
+    margin-right: 1.5rem;
+}
+
+/*Le daremos tamaño y margen a los span que sean hermanos directos del parrafo con la clase destacado*/
+
+footer p.destacado+span {
+    margin-left: 1.7rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/*Haremos el menu flexible en columnas, le asignaremos margenes, padding y borde a la zona de abajo*/
+
+footer ul#menu-contacto {
+    display: flex;
+    flex-flow: column;
+    border-top: 1px solid #2BB3C0;
+    border-bottom: 1px solid #2BB3C0;
+    padding-bottom: 0.5rem;
+    margin-left: 1.7rem;
+    margin-right: 1.5rem;
+    margin-bottom: 3rem;
+    padding-top: 1.5rem;
+}
+
+/*Quitaremos el estilo de las listas y le daremos margenes para ajustarlo*/
+
+footer ul#menu-contacto li {
+    list-style: none;
+    margin-bottom: 1rem;
+    margin-left: -2rem;
+}
+
+/*Quitaremos el subrayado a los enlaces, aplicaremos margenes y le daremos un color*/
+
+footer ul#menu-contacto li a {
+    color: white;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+/*Haremos el contenedor flexible en formato columnas, le asignaremos una imagen de fondo
+que cubra todo el contenedor, centraremos los items de manera vertical y horizontal y le 
+daremos un tamaño al contenedor*/
+
+footer div#ubicacion {
+    background: url("../app_rezadricar/logo/mapa.png");
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Le asignaremos el alto a la imagen*/
+
+footer div#ubicacion picture img {
+    height: 5rem;
+}
+
+/*Haremos el contenedor flexible en columnas, le daremos un color de fondo,tamaño, 
+centraremos los items de manera vertical y horizontal y le daremos estilo al borde*/
+
+footer div#ubicacion div#info-car {
+    background-color: black;
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+}
+
+/*Le asignaremos margenes al span del contenedor*/
+
+footer div#ubicacion div#info-car span {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+/*Le asignaremos tamaño al parrafo del contenedor y lo alinearemos abajo*/
+
+footer div#ubicacion div#info-car p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: auto;
+}
+
+/*Le asignaremos tamaño al small del contenedor y le daremos margenes*/
+
+footer small {
+    margin-top: 4rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+/*Le asignaremos un tamaño, un color de fondo y centramos los items de forma vertical y horizontal*/
+
+footer div#logo {
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+    height: 4rem;
+    align-items: center;
+    border-top: 1px solid #676D6D;
+}
+
+/*Le asignaremos tamaño a la imagen del contenedor*/
+
+footer div#logo picture img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+/*----FORMULARIO DE CONTACTO----*/
+
+/*Damos margen y tamaño al primer parrafo del contenedor*/
+
+div#contacto nav#enlacecontacto p {
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+/*Quitamos el subrayado del enlace y damos color*/
+
+nav#enlacecontacto p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*Asignamos tamaño, margen y color a la seccion*/
+
+div#contacto section#contenidocontacto {
+    background-color: #2C2C2C;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    border: 1px solid #C42C2C;
+    padding-bottom: 2rem;
+}
+
+.error {
+
+    color: #C42C2C;
+    visibility: hidden;
+    font-size: 0.8rem;
+}
+
+/*Asignamos tamaño a la fuente y le asignamos un borde en la parte inferior
+para hacer la linea separadora*/
+
+div#contacto section#contenidocontacto h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #C42C2C;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Hacemos el formulario flexible y le añadimos un espaciado*/
+
+div#contacto section#contenidocontacto form {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+}
+
+span#caracteres {
+    margin-bottom: 1rem;
+
+}
+
+
+/*Le aplicamos al textarea un tamaño,margen, color, borde y espaciado
+Tambien hacemos que ese tamaño no se redimensione*/
+
+section#contenidocontacto form textarea {
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    border-color: white;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+/*Cambiamos de color el contenido del textarea y cambiamos 
+el tamaño de la fuente que lo contiene*/
+
+textarea::placeholder {
+    color: white;
+    font-size: 1rem;
+}
+
+/*Hacemos el contenedor flexible para que queden alineados
+le aplicamos un borde y un espaciado para que podamos crear la separacion
+(linea roja)*/
+
+div#contacto section#contenidocontacto form nav#terminos {
+    border-bottom: 1px solid #C42C2C;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*Le aplicamos un margen al label del contenedor #terminos*/
+
+div#contacto section#contenidocontacto form nav#terminos label {
+    margin-left: 0.3rem;
+}
+
+/*-----MI CUENTA-----*/
+div#detallesUsuario {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 1rem;
+
+    padding: 1rem;
+
+
+
+
+
+}
+
+.botonForm {
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-color: #2BB3C0;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+
+
+
+}
+
+.botonFormCerrar {
+    color: black;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid#2BB3C0;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+
+
+}
+
+
+
+div#detallesUsuario picture#userDetalle {
+
+    align-self: center;
+    height: 10rem;
+    width: 10rem;
+}
+
+div#detallesUsuario picture#userDetalle img {
+    width: 100%;
+    height: 100%;
+}
+
+
+div#datosUser {
+    border-top: 1px solid #CECECE;
+    border-bottom: 1px solid #CECECE;
+    display: flex;
+    flex-flow: column;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+}
+
+div#contenidoUser {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    align-content: center;
+
+}
+
+div#contenidoUser strong {
+
+    flex: 50%;
+    text-align: center;
+}
+
+
+div#contenidoUser p {
+
+    flex: 50%;
+    text-align: center;
+
+}
+
+/*--------INFORMACIÓN---------*/
+
+/*Aplicamos al contenedor un color de fondo,borde y lo 
+haremos flexible en columnas*/
+
+main div#informacion {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 1rem;
+}
+
+/*Clase para justificar el texto y añadir un espaciado al articulo*/
+
+.contenidoinfo {
+    padding: 1.5rem;
+}
+
+/*Aplicamos borde y espaciado al titulo del articulo*/
+
+article.contenidoinfo h2 {
+    border-bottom: 2px solid #2BB3C0;
+    padding-bottom: 1rem;
+}
+
+/*Boton volver arriba*/
+
+div#volverarriba {
+    width: 8rem;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    position: fixed;
+    opacity: 0.9;
+    display: none;
+    border-radius: 0.5rem;
+    border: 1px solid #2BB3C0;
+}
+
+div#volverarriba>a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*-------NOTICIAS------*/
+div#noticias {
+    display: flex;
+    flex-flow: column;
+}
+
+div#noticias article.contenidoinfonoticias {
+    border: 1px solid #CECECE;
+    display: flex;
+    flex-flow: column;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+div#noticias article.contenidoinfonoticias h2 {
+    color: #676D6D;
+}
+
+div#noticias article.contenidoinfonoticias picture {
+    display: flex;
+}
+
+div#noticias article.contenidoinfonoticias picture img {
+    width: 100%;
+    height: 100%;
+}
+
+/*------CONTACTO------*/
+
+/*Damos margen y tamaño al primer parrafo del contenedor*/
+
+nav#enlacecontacto p {
+    margin-left: 1rem;
+}
+
+/*Quitamos el subrayado del enlace y damos color*/
+
+nav#enlacecontacto p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Damos color y tamaño a los small*/
+nav#enlacecontacto p small {
+    color: black;
+    font-size: 0.9rem;
+}
+
+/* Haremos flexible el contenedor que tendrá las secciones*/
+div#contenedorcontacto {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+
+/*Damos estilo y haremos flexible las secciones */
+main section.itemscontacto {
+    background-color: white;
+    border: 1.5px solid black;
+    display: flex;
+    flex-flow: column;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+}
+
+/*Creamos una clase para el titulo de cada seccion*/
+.titulocontacto {
+
+    align-items: center;
+    border-bottom: 2px solid #2BB3C0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+
+}
+
+picture img#contacta {
+    border: 2px solid black;
+}
+
+
+
+
+
+/*Damos margen a los p de las secciones*/
+section.itemscontacto p {
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+
+/*------CATALOGO------*/
+
+div#tituloFiltro {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+div#tituloFiltro h2 {
+    font-weight: normal;
+}
+
+div#tituloFiltro picture {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 0.5rem;
+
+}
+
+div#tituloFiltro picture img {
+    height: 100%;
+    width: 100%;
+}
+
+div#filtro {
+    display: flex;
+    flex-flow: column;
+    border: 1px solid #CECECE;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+div#filtro form {
+
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+div#filtro form label {
+    flex: 50%;
+}
+
+div#filtro form input {
+    flex: 50%;
+}
+
+/*Haremos flexible el contenedor en modo columnas*/
+footer div#infocontacto {
+    display: flex;
+    flex-flow: column;
+}
+
+/*Ocultamos la seccion*/
+nav#secciondesplegado {
+    display: none;
+}
+
+
+
+main>picture {
+    width: 100%;
+    align-self: center;
+}
+
+main>picture img {
+    width: 100%;
+}
+
+/*Damos estilo al cartel*/
+
+span.cartel {
+    background-color: #C42C2C;
+    border-radius: 0.4rem;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 25;
+    padding: 0.5rem;
+    height: auto;
+    display: none;
+    font-size: bold;
+    color: white;
+
+}
+
+/*---------ADMINISTRAR USUARIOS-----------*/
+
+.mensajeAccion {
+    font-weight: bold;
+    margin-left: 0.2rem;
+    color: #2BB3C0;
+
+}
+
+table#listadoUsuarios {
+
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    white-space: no-wrap;
+    margin-bottom: 2rem;
+
+}
+
+.enlinea {
+    display: inline
+}
+
+#listadoUsuarios,
+#listadoUsuarios tr,
+#listadoUsuarios th,
+#listadoUsuarios td {
+    border: 1px solid #CECECE;
+    height: 2.5rem;
+
+}
+
+#listadoUsuarios th {
+
+    background-color: black;
+    COLOR: WHITE;
+
+}
+
+.botonAccion {
+
+    background-color: white;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: black;
+    height: 2.5rem;
+    width: 40%;
+    font-size: 1rem;
+    border-color: #2BB3C0;
+    font-weight: bold;
+}
+
+form#contenedorAgregar {
+    display: flex;
+    width: 100%;
+
+}
+
+form#agregarUsuarios {
+
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+div#contenedorBotones {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div#contenedorBotones input {
+    flex: 40%;
+    background-color: black;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1rem;
+    border-color: #2BB3C0;
+    font-weight: bold;
+}
+
+div#contenedorBotones input:nth-child(2) {
+    margin-left: 1rem;
+}
+
+
+.botonAgregarUser {
+
+    background-color: black;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    border-color: #2BB3C0;
+    font-weight: bold;
+}
+
+/*----ADMINISTRAR COCHES----*/
+
+td.contenedorimg img {
+    height: 10rem;
+    width: 15rem;
+
+}
+
+.transformar {
+    text-transform: uppercase;
+}
+
+div#gestionarFoto {
+
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    align-items: center;
+}
+
+div#gestionarFoto input {
+
+    margin-left: 1rem;
+}
+
+div#detalleCoche {
+
+
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+div#detalleCoche img {
+
+    height: 15rem;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+}
+
+div#detalleCoche p {
+    text-transform: uppercase;
+}
+
+div#detalleCoche p strong {
+
+    margin-right: 0.5rem;
+
+}
+
+input#btnocultarCoche {
+    background-color: black;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: white;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-color: #2BB3C0;
+    font-weight: bold;
+    margin-top: 1rem;
+    width: 50%;
+}
+
+.imageneditar {
+    height: 15rem;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.estiloeliminar {
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: white;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-color: #2BB3C0;
+    font-weight: bold;
+    margin-top: 1rem;
+    width: 50%;
+    margin-bottom: 1rem;
+
+}
+
+div#contenidoconfirmar {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+.confirmarborrado {
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: white;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-color: #2BB3C0;
+    font-weight: bold;
+    flex: 50%;
+    margin-bottom: 1rem;
+
+}
+
+.estilopregunta {
+
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+    border: 2px solid #2BB3C0;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+/*----catalogo-----*/
+
+
+div#productos {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+
+
+}
+
+
+.catalogo {
+    display: flex;
+    flex-flow: column;
+    flex: 0 40%;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #CECECE;
+    border-radius: 1rem;
+
+
+}
+
+#productos>* {
+    flex: 0 40%;
+
+}
+
+.catalogo h3 {
+    width: 100%;
+    text-transform: uppercase;
+
+
+}
+
+
+.catalogo img {
+
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0.5rem;
+
+
+}
+
+
+
+.sabermas {
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    border-color: #2BB3C0;
+    font-weight: bold;
+    width: 100%;
+    margin-top: auto;
+    padding: 0.5rem;
+
+
+}
+
+/*----DETALLE COCHE----*/
+
+div#detalle {
+
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+}
+
+div#detalle form {
+
+    margin-bottom: 0.5rem;
+}
+
+div#detalle h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    border-bottom: 1px solid #CECECE;
+    padding-bottom: 1rem;
+}
+
+div#detalle div#detalleCocheSeleccionado {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+
+}
+
+div#detalle div#detalleCocheSeleccionado p {
+
+    text-transform: uppercase;
+    margin-left: 30%;
+
+}
+
+
+div#detalle div#detalleCocheSeleccionado img {
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+
+}
+
+.btnDetallesCoche {
+    background-color: black;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: white;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-color: #2BB3C0;
+    font-weight: bold;
+    width: 100%;
+
+}
+
+
+.mensajeuser {
+
+    border: 1px solid #2BB3C0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.btnDisabled{
+
+    background-color: black;
+    align-self: center;
+    text-align: center;
+    opacity: 0.5;
+    border-radius: 0.5rem;
+    color: white;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-color: #2BB3C0;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+}
+
+
+
+/*----PRUEBA----*/
+
+div#contenedorprueba {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+    border: 1px solid #CECECE;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+picture#probarfoto {
+    width: 100%;
+}
+
+div#contenedorprueba img {
+    width: 100%;
+
+}
+
+div#contenedorprueba h2 {
+    text-transform: uppercase;
+
+}
+
+div#contenedorprueba form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+
+}
+
+
+div#contenedorprueba form p {
+    flex: 100%;
+    text-align: right;
+    font-weight: bolder;
+    margin-top: auto;
+
+}
+
+div#contenedorprueba form label {
+    flex: 20%;
+
+    height: 2.5rem;
+
+}
+
+div#contenedorprueba form label+input {
+    flex: 80%;
+    align-content: center;
+
+}
+
+div#contenedorCoches {
+
+    margin-left: 1rem;
+
+}
+
+div#contenedorCitas {
+
+    margin-left: 1rem;
+
+}
+
+div#contenedorMensaje{
+    display: flex;
+    flex-flow:row wrap;
+}
+
+div#contenedorMensaje form{
+    margin-left: 1rem;
+}
+
+/*------VERSION TABLET------*/
+
+@media all and (min-width:800px) {
+
+    /*Damos ancho y alineamos al centro las imagenes que estén justo debajo del main*/
+    main>picture {
+        width: 80%;
+        align-self: center;
+    }
+
+
+
+    /*Footer */
+    footer div#infocontacto {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    /* cambiamos el margen*/
+    footer p.destacado {
+        margin-left: 0rem;
+    }
+
+    footer div#infocontacto p#destacadotel {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+
+    footer p.destacado+span {
+        border-bottom: none;
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+
+    /*Cambiamos los bordes del contenedor*/
+    footer ul#menu-contacto {
+        border-bottom: none;
+        border-top: none;
+        border-left: 1px solid #2BB3C0;
+        padding-top: 0rem;
+        padding-left: 4rem;
+    }
+
+    footer div#infocontacto p#destacadotel {
+        border-top: none;
+    }
+
+    /*----CONTACTO----*/
+
+    /*Haremos flexible el div*/
+    div#contacto {
+        display: flex;
+        flex-flow: column;
+    }
+
+    /*Cambiamos el tamaño y lo alineamos al centro*/
+    div#contacto section#contenidocontacto {
+        width: 60%;
+        align-self: center;
+    }
+
+    /*---------REZADRI CAR-------*/
+
+    /*Alineamos los articulos al centro y le cambiamos el tamaño*/
+    main nav#secciones article.item {
+        align-self: center;
+        width: 70%;
+    }
+
+     a {
+        cursor: pointer;
+    }
+
+    main {
+        display: flex;
+        flex-flow: column;
+    }
+
+
+
+    /*---MI CUENTA----*/
+
+    div#detallesUsuario {
+        width: 50%;
+        align-self: center;
+    }
+
+    div#detalle {
+
+        width: 50%;
+        align-self: center;
+    }
+
+    div#contenedorprueba {
+        width: 80%;
+        align-self: center;
+    }
+
+}
+
+/*-------VERSION ESCRITORIO--------*/
+
+@media all and (min-width:1280px) {
+
+    /*Modificamos el tamaño y alineamos al centro*/
+    main>picture {
+        width: 60%;
+        align-self: center;
+    }
+
+
+    header nav#menu-principal {
+        justify-content: start;
+        background-color: black;
+    }
+
+
+    picture#login {
+
+
+        margin-left: auto;
+        margin-right: 4rem;
+    }
+
+    picture#logo {
+
+
+        margin-left: 4rem;
+    }
+
+    /*Ocultamos la hamburguesa*/
+    nav#menu-principal picture img#hamburguesa {
+        display: none;
+    }
+
+    /*Mostramos la seccion del menu y lo haremos flexible*/
+    nav#secciondesplegado {
+        display: flex;
+
+        width: 80%;
+        justify-content: center;
+
+    }
+
+    * nav#secciondesplegado ul#opciondesplegado {
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+
+    /*Quitamos el estilo de lista a los li*/
+    nav#secciondesplegado ul#opciondesplegado li {
+        list-style: none;
+        margin: 1rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        cursor: pointer;
+
+    }
+
+
+
+    /*Quitamos el subrayado a los enlaces*/
+    nav#secciondesplegado ul#opciondesplegado li a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+
+
+    /*-----INFORMACIÓN-----*/
+    main {
+        display: flex;
+        flex-flow: column;
+    }
+
+    div#informacion {
+        width: 70%;
+        align-self: center;
+    }
+
+    /*-----PAGINA PRINCIPAL------*/
+ 
+    /*Asignamos tamaño y margen*/
+    main nav#secciones article.item {
+        width: 50%;
+        margin: 1rem;
+    }
+
+    main nav#secciones article.item img {
+        width: 30rem;
+        height: 30rem;
+    }
+
+
+    /*------------CONTACTA-----------*/
+
+    /*Damos un ancho al contenedor*/
+    main section.itemscontacto {
+        width: 55%;
+    }
+
+    /*---------CATALOGO-------------*/
+
+    div#filtro {
+        width: 50%;
+        align-self: center;
+
+
+    }
+
+    div#tituloFiltro {
+        width: 50%;
+        align-self: center;
+    }
+
+
+
+
+    div#productos>* {
+        flex: 0 25%;
+
+    }
+
+    /*---------LOGIN---------*/
+
+    /*Damos tamaño y posicionamos el contenedor*/
+    div#login {
+        width: 50%;
+        align-self: center;
+    }
+
+    /*---------NOTICIAS---------*/
+    div#noticias {
+        width: 50%;
+        align-self: center;
+    }
+
+    /*---MI CUENTA----*/
+
+    div#detallesUsuario {
+        width: 50%;
+        align-self: center;
+    }
+
+
+    div#detalle {
+
+        width: 50%;
+        align-self: center;
+    }
+
+    div#detalle div#detalleCocheSeleccionado p {
+
+
+        margin-left: 40%;
+
+    }
+
+    div#contenedorprueba {
+        width: 50%;
+        align-self: center;
+    }
+
+    picture#probarfoto img {
+        height: 35rem;
+    }
+}
