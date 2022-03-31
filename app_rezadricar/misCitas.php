@@ -157,7 +157,7 @@ if (isset($_POST["btnCancelarCita"])) {
             while ($row = mysqli_fetch_array($datos)) { //Todos los campos de usuario
                 $idUsuario = $row["id"]; //Obtenemos la id de la fila
             }
-            $consulta = "select coches.id,coches.foto,pruebas.id,pruebas.fecha,pruebas.fk_usuarios_id from coches,pruebas where coches.id = pruebas.fk_coches_id and pruebas.fk_usuarios_id =" . $idUsuario;
+            $consulta = "select coches.id,coches.foto,pruebas.id,pruebas.fecha,pruebas.hora,pruebas.fk_usuarios_id from coches,pruebas where coches.id = pruebas.fk_coches_id and pruebas.fk_usuarios_id =" . $idUsuario;
             $resultado = mysqli_query($conexion, $consulta);
             if ($resultado) {
             ?>
@@ -167,7 +167,7 @@ if (isset($_POST["btnCancelarCita"])) {
                     while ($fila = mysqli_fetch_assoc($resultado)) {
 
                         echo "<div class='catalogo'>";
-                        echo "<h2>" . $fila["fecha"] . "</h2>";
+                        echo "<h2>" . $fila["fecha"] . " / ".$fila["hora"]."</h2>";
                         echo "<img src='images/" . $fila["foto"] . "'/>";
                         echo "<form id='contenedorboton' action='misCitas.php' method='post'>";
                         echo "<button onclick='return confirm(\"¿ESTÁS SEGURO DE QUE QUIERES CANCELAR ESTA CITA?\");'class='sabermas' value='" . $fila["id"] . "' name='btnCancelarCita' >CANCELAR CITA</button>";

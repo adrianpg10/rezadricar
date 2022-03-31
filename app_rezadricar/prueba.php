@@ -215,7 +215,7 @@ if (isset($_POST["btnPrueba"])) {
 
             if (isset($resp->coche)) {
                 echo "<h2>" . $resp->coche->marca . " " . $resp->coche->modelo . "</h2>";
-                echo "<img src='images/" . $resp->coche->foto . "'/>";
+                echo "<img src='images/" . $resp->coche->foto . "'/><br/>";
 
             ?>
                 <form method="post" action="prueba.php">
