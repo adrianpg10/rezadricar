@@ -1,6 +1,6 @@
 ## Descripción
 
-Simulación de catalogo de coches en el que podrás comprar y probarlos (Servicios Rest PHP).
+Simulación de catálogo de coches en el que podrás comprar y probarlos (Servicios Rest PHP).
 
 ## Autor ✒️
 **Adrián Pérez Gómez** - *Redes*
