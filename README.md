@@ -8,9 +8,3 @@ Simulación de catálogo de coches en el que podrás comprar y probarlos (Servic
 * [Github](https://github.com/adrianpg10)
 * [LinkedIn](https://www.linkedin.com/in/adrian-perez-gomez/)
 * [Portfolio](https://adrianperezportfolio.netlify.app/)
-
-
-## Verlo en directo en:
-
-* [http://rezadricar.herokuapp.com/](http://rezadricar.herokuapp.com/)
-
